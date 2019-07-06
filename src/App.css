@@ -39,3 +39,7 @@
   src: url('app/fonts/CircularStd-Medium.otf');
   font-weight: normal;
 }
+
+body {
+  margin: 0;
+}
