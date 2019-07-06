@@ -6,13 +6,16 @@ const NavContent = styled.div`
   /* position:fixed; */
   top: 0px;
   display: grid;
+  position: fixed;
   grid-template-columns: 180px 1fr;
+  background-color: white;
 `;
 
 const Nav = styled.div`
   display: grid;
   grid-auto-flow: column;
-  padding: 51px;
+  padding: 35px;
+  /* justify-content: center; */
 `;
 
 const NavLinkElem = styled.a`
@@ -24,17 +27,20 @@ const NavLinkElem = styled.a`
   font-weight: 350;
   font-size: 1rem;
   line-height: 1.6;
-  padding: 0 20px;
+  padding: 0 40px;
 
-  ${props => props.active && css`
-    color:#FF6D00;
-    border-bottom: #FF6D00 1px solid;
-  `}
-`
+  ${props =>
+    props.active &&
+    css`
+      color: #ff6d00;
+      /* border-bottom: #ff6d00 1px solid; */
+      text-shadow: 0 0 60px #ff6d00;
+    `}
+`;
 
-const NavLink = ({ name, active }) => (<NavLinkElem active={active}>
-  { name }
-</NavLinkElem>)
+const NavLink = ({ name, active }) => (
+  <NavLinkElem active={active}>{name}</NavLinkElem>
+);
 
 const Header = () => {
   return (
@@ -42,10 +48,10 @@ const Header = () => {
       <NavContent>
         <Logo />
         <Nav>
-          <NavLink active name="Home"/>
-          <NavLink name="What we offer"/>
-          <NavLink name="About us"/>
-          <NavLink name="Contacts"/>
+          <NavLink href="#home" name="Home" />
+          <NavLink active href="#what-we-offer" name="What we offer" />
+          <NavLink href="#about-us" name="About us" />
+          <NavLink href="#contacts" name="Contacts" />
         </Nav>
       </NavContent>
     </Fragment>
