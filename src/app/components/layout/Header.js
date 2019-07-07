@@ -3,7 +3,6 @@ import styled, { css } from "styled-components";
 import Logo from "./Logo";
 
 const NavContent = styled.div`
-  /* position:fixed; */
   top: 0px;
   display: grid;
   position: fixed;
@@ -15,7 +14,6 @@ const Nav = styled.div`
   display: grid;
   grid-auto-flow: column;
   padding: 35px;
-  /* justify-content: center; */
 `;
 
 const NavLinkElem = styled.a`

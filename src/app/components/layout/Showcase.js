@@ -2,19 +2,12 @@ import React, { Fragment, Component } from "react";
 import styled from "styled-components";
 import RequestButton from "../layout/sharedComponents/RequestButton";
 
-const ShowcaseElem = styled.div`
-  padding-top: 186px;
-  padding-bottom: 250px;
-  display: grid;
-  grid-auto-flow: column;
-  grid-template-columns: 1fr 1fr;
-`;
-
 const LeftContainerRegular = styled.div`
   font-family: "BasisGrotesquePro-Light";
   font-weight: lighter;
   display: inline;
-  font-size: 58px;
+  font-size: 2.7rem;
+  margin-right: 3vw;
 `;
 
 const LeftContainerBold = styled.span`
@@ -25,7 +18,7 @@ const LeftContainer = () => {
   return (
     <Fragment>
       <LeftContainerRegular>
-        Join the <br />crypto revolution with{" "}
+        Join the <br />crypto revolution <br/> with{" "}
         <LeftContainerBold>Blockchain technology!</LeftContainerBold>
       </LeftContainerRegular>
     </Fragment>
@@ -33,7 +26,7 @@ const LeftContainer = () => {
 };
 
 const RightParagraphElem = styled.p`
-  font-size: 20px;
+  font-size: 0.9rem;
   line-height: 1.8;
   font-family: "BasisGrotesquePro-Light";
 `;
@@ -50,7 +43,7 @@ const RightContainer = () => {
     <Fragment>
       <RightContainerElem>
         <RightParagraphElem>
-          Get your own crypto exchange <br/> and leave competitors behind With
+          Get your own crypto exchange and <br/> leave competitors behind <br /> With
           professional consulting team of experts
         </RightParagraphElem>
         <RequestButton />
@@ -58,6 +51,14 @@ const RightContainer = () => {
     </Fragment>
   );
 };
+
+const ShowcaseElem = styled.div`
+  padding-top: 186px;
+  padding-bottom: 136px;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 1fr;
+`;
 
 export default class Showcase extends Component {
   render() {
