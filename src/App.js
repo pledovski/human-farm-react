@@ -8,6 +8,7 @@ import Benefits from "./app/components/layout/Benefits";
 import OurClients from "./app/components/layout/OurClients";
 import AboutUs from "./app/components/layout/AboutUs";
 import Team from "./app/components/layout/Team";
+import Footer from "./app/components/layout/Footer";
 
 const App = () => (
   <AppLayout>
@@ -18,6 +19,7 @@ const App = () => (
     <OurClients />
     <AboutUs />
     <Team />
+    <Footer />
   </AppLayout>
 );
 

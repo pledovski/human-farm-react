@@ -15,7 +15,7 @@ export const BlockHeaderElem = styled.div`
   font-size: 30px;
   margin-right: 40px;
 `;
-const BlockParagraphElem = styled.div`
+export const BlockParagraphElem = styled.div`
   font-family: "BasisGrotesquePro";
   font-weight: lighter;
   font-size: 16px;

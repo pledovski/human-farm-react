@@ -44,7 +44,7 @@ const OfferButtonElem = styled.button`
 
 const ButtonsListElem = styled.div`
   display: grid;
-  margin-top: 100px;
+  margin: 50px 0;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 `;
 
