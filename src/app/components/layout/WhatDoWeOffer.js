@@ -52,7 +52,7 @@ const WhatDoWeOffer = () => {
   return (
     <WhatDoWeOfferElem>
       <SizeContainer>
-        <BlockTitle />
+        <BlockTitle header={<p>What <br/> do we offer</p>} paragraph={<p>Get your own crypto exchange and leave competitors behind <br/>With professional consulting team of experts</p>} />
         <ButtonsListElem>
           <OfferButtonElem>
             Exchange
