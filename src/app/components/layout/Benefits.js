@@ -13,7 +13,6 @@ const MainContainer = styled.div`
   margin-right: -25%;
   margin-top: -330px;
   background-color: #1b166f;
-  /* padding: 54px 0 70px 0; */
 `;
 
 const BlockTitleElem = styled.div`
@@ -21,7 +20,7 @@ const BlockTitleElem = styled.div`
   grid-auto-flow: row;
   align-items: start;
   grid-template-rows: 1fr 3fr;
-  padding: 90px 90px;
+  padding: 90px 76px;
 `;
 
 const BlockHeaderElem = styled.div`
@@ -86,7 +85,7 @@ const Benefits = () => (
         <BenefitItem src={bulb} name="Decentralized" />
         <BenefitItem
           src={link}
-          name={<h3 style={{fontFamily: "CircularStd", fontSize: '16px', fontWeight: '350'}}>Immutable <br/> and unchangeable</h3>}
+          name={<p style={{fontFamily: "CircularStd", fontSize: '16px', fontWeight: '350'}}>Immutable <br/> and unchangeable</p>}
         />
         <BenefitItem
           src={fingerprint}
@@ -94,7 +93,7 @@ const Benefits = () => (
         />
         <BenefitItem
           src={head}
-          name={<h3 style={{fontFamily: "CircularStd", fontSize: '16px', fontWeight: '350'}}>Smart, <br/> configured for <br/> automatic transactions</h3>}
+          name={<p style={{fontFamily: "CircularStd", fontSize: '16px', fontWeight: '350'}}>Smart, <br/> configured for <br/> automatic transactions</p>}
         />
       </RightContainer>
     </MainContainer>

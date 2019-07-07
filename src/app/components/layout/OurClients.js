@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import React from "react";
 import styled, { css } from "styled-components";
-import BlockTitle from "./sharedComponents/BlockTitle";
+import { BlockTitle } from "./sharedComponents/BlockTitle";
 import cex from "../../../img/cex.png";
 import utorg from "../../../img/utorg-logo-white.png";
 import zerohub from "../../../img/zerohub.png";

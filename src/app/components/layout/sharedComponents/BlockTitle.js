@@ -9,7 +9,7 @@ const BlockTitleElem = styled.div`
   padding-top: 91px;
 `;
 
-const BlockHeaderElem = styled.div`
+export const BlockHeaderElem = styled.div`
   font-family: "CircularStd";
   font-weight: bold;
   font-size: 30px;
@@ -22,7 +22,7 @@ const BlockParagraphElem = styled.div`
   line-height: 1.8;
 `;
 
-export default function BlockTitle({ header, paragraph}) {
+export const BlockTitle = ({ header, paragraph}) => {
   return (
     <BlockTitleElem>
       <BlockHeaderElem>{ header }</BlockHeaderElem>

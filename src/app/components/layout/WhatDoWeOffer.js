@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import BlockTitle from "./sharedComponents/BlockTitle";
+import { BlockTitle } from "./sharedComponents/BlockTitle";
 import SizeContainer from "../layout/sharedComponents/SizeContainer";
 import plus from "../../../img/add-orange.svg";
 
@@ -10,7 +10,7 @@ const Plus = styled.img`
   height: 18px;
 `;
 
-const WhatDoWeOfferElem = styled.div`
+export const WideBackground = styled.div`
   background-color: #f9f9f9;
   width: 100vw;
   position: relative;
@@ -50,7 +50,7 @@ const ButtonsListElem = styled.div`
 
 const WhatDoWeOffer = () => {
   return (
-    <WhatDoWeOfferElem>
+    <WideBackground>
       <SizeContainer>
         <BlockTitle header={<p>What <br/> do we offer</p>} paragraph={<p>Get your own crypto exchange and leave competitors behind <br/>With professional consulting team of experts</p>} />
         <ButtonsListElem>
@@ -80,7 +80,7 @@ const WhatDoWeOffer = () => {
           </OfferButtonElem>
         </ButtonsListElem>
       </SizeContainer>
-    </WhatDoWeOfferElem>
+    </WideBackground>
   );
 };
 
