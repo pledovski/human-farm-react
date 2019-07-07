@@ -20,7 +20,7 @@ const BlockParagraphElem = styled.div`
   line-height: 1.8;
 `;
 
-export default function BlockHeader() {
+export default function BlockTitle() {
   return (
     <BlockTitleElem>
       <BlockHeaderElem>What <br/> do we offer</BlockHeaderElem>

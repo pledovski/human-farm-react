@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import BlockHeader from "../layout/sharedComponents/BlockHeader";
+import BlockTitle from "./sharedComponents/BlockTitle";
 import SizeContainer from "../layout/sharedComponents/SizeContainer";
 import plus from "../../../img/add-orange.svg";
 
@@ -11,7 +11,6 @@ const Plus = styled.img`
 `;
 
 const WhatDoWeOfferElem = styled.div`
-  z-index: -1000;
   background-color: #f9f9f9;
   width: 100vw;
   position: relative;
@@ -28,7 +27,7 @@ const OfferButtonElem = styled.button`
   justify-content: space-between;
   cursor: pointer;
   color: #1c1c4a;
-  font-family: CircularStd;
+  font-family: "CircularStd";
   font-weight: 350;
   font-size: 1rem;
   width: 200px;
@@ -53,7 +52,7 @@ const WhatDoWeOffer = () => {
   return (
     <WhatDoWeOfferElem>
       <SizeContainer>
-        <BlockHeader />
+        <BlockTitle />
         <ButtonsListElem>
           <OfferButtonElem>
             Exchange
