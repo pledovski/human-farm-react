@@ -9,17 +9,20 @@ import OurClients from "./app/components/layout/OurClients";
 import AboutUs from "./app/components/layout/AboutUs";
 import Team from "./app/components/layout/Team";
 import Footer from "./app/components/layout/Footer";
+import { AppProvider } from "./app/AppProvider";
 
 const App = () => (
   <AppLayout>
-    <Header />
-    <Showcase />
-    <WhatDoWeOffer />
-    <Benefits />
-    <OurClients />
-    <AboutUs />
-    <Team />
-    <Footer />
+    <AppProvider>
+      <Header />
+      <Showcase />
+      <WhatDoWeOffer />
+      <Benefits />
+      <OurClients />
+      <AboutUs />
+      <Team />
+      <Footer />
+    </AppProvider>
   </AppLayout>
 );
 

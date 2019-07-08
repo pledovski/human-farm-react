@@ -7,10 +7,16 @@ export class AppProvider extends Component {
     super(props);
     this.state = {
       offer: "Crypto Processing",
-      setOffer: this.setOffer
+      displayOffer: false,
+      setOffer: this.setOffer,
+      toggleDisplayOffer: this.toggleDisplayOffer
     };
   }
   setOffer = offer => this.setState({ offer });
+  toggleDisplayOffer = displayOffer => {
+    this.setState({ displayOffer });
+    console.log(this.state);
+  };
 
   render() {
     return (
