@@ -13,10 +13,10 @@ const ButtonElem = styled.a`
   border-bottom: #ff6d00 3px solid;
 `;
 
-const RequestButton = () => {
+const RequestButton = ({name}) => {
   return (
   <Fragment>
-    <ButtonElem>REQUEST</ButtonElem>
+    <ButtonElem>{name}</ButtonElem>
   </Fragment>);
 };
 

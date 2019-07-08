@@ -1,13 +1,21 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+import { AppContext, AppProvider } from "../../AppProvider";
+import OfferDetails from "./sharedComponents/OfferDetails";
 import { BlockTitle } from "./sharedComponents/BlockTitle";
 import SizeContainer from "../layout/sharedComponents/SizeContainer";
 import plus from "../../../img/add-orange.svg";
+import minus from "../../../img/minus.svg";
 
 const Plus = styled.img`
   display: inline-block;
   width: 18px;
   height: 18px;
+  /* ${props =>
+    props.active &&
+    css`
+      content: ({minus});
+    `} */
 `;
 
 export const WideBackground = styled.div`
@@ -18,7 +26,8 @@ export const WideBackground = styled.div`
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
-  height: 861px;
+  padding-bottom: 300px;
+  /* height: 1500px; */
 `;
 
 const OfferButtonElem = styled.button`
@@ -40,6 +49,15 @@ const OfferButtonElem = styled.button`
     border-bottom: #ff6d00 1px solid;
     color: #ff6d00;
   }
+  :focus {
+    outline: none;
+  }
+  ${props =>
+    props.active &&
+    css`
+      border-bottom: #ff6d00 1px solid;
+      color: #ff6d00;
+    `}
 `;
 
 const ButtonsListElem = styled.div`
@@ -48,37 +66,44 @@ const ButtonsListElem = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 `;
 
+const OfferButton = ({ name, active }) => (
+  <AppContext.Consumer>
+    {({ offer, setOffer }) => (
+      <OfferButtonElem active={offer === name} onClick={() => setOffer(name)}>
+        {name} <Plus active={active} src={plus} />
+      </OfferButtonElem>
+    )}
+  </AppContext.Consumer>
+);
+
 const WhatDoWeOffer = () => {
   return (
     <WideBackground>
       <SizeContainer>
-        <BlockTitle header={<p>What <br/> do we offer</p>} paragraph={<p>Get your own crypto exchange and leave competitors behind <br/>With professional consulting team of experts</p>} />
-        <ButtonsListElem>
-          <OfferButtonElem>
-            Exchange
-            <Plus src={plus} />
-          </OfferButtonElem>
-          <OfferButtonElem>
-            Crypto wallet
-            <Plus src={plus} />
-          </OfferButtonElem>
-          <OfferButtonElem>
-            Crypto Processing
-            <Plus src={plus} />
-          </OfferButtonElem>
-          <OfferButtonElem>
-            Market making
-            <Plus src={plus} />
-          </OfferButtonElem>
-          <OfferButtonElem>
-            KYC
-            <Plus src={plus} />
-          </OfferButtonElem>
-          <OfferButtonElem>
-            Consulting
-            <Plus src={plus} />
-          </OfferButtonElem>
-        </ButtonsListElem>
+        <AppProvider>
+          <BlockTitle
+            header={
+              <p>
+                What <br /> do we offer
+              </p>
+            }
+            paragraph={
+              <p>
+                Get your own crypto exchange and leave competitors behind <br />
+                With professional consulting team of experts
+              </p>
+            }
+          />
+          <ButtonsListElem>
+            <OfferButton name="Exchange" />
+            <OfferButton name="Crypto wallet" />
+            <OfferButton name="Crypto Processing" />
+            <OfferButton name="Market making" />
+            <OfferButton name="KYC/AML" />
+            <OfferButton name="Consulting" />
+          </ButtonsListElem>
+          <OfferDetails />
+        </AppProvider>
       </SizeContainer>
     </WideBackground>
   );

@@ -46,7 +46,7 @@ const RightContainer = () => {
           Get your own crypto exchange and <br/> leave competitors behind <br /> With
           professional consulting team of experts
         </RightParagraphElem>
-        <RequestButton />
+        <RequestButton name="REQUEST" />
       </RightContainerElem>
     </Fragment>
   );

@@ -75,7 +75,7 @@ const Footer = () => {
           Whant to know more information about <br /> our sevices? <br />
           Send a request{" "}
         </BlockParagraphElem>
-        <RequestButton />
+        <RequestButton name="REQUEST" />
       </Wrapper>
       <ColoredLine />
       <Credentials>

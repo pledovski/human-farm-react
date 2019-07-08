@@ -11,7 +11,7 @@ const MainContainer = styled.div`
   position: relative;
   margin-left: -7%;
   margin-right: -25%;
-  margin-top: -330px;
+  margin-top: -200px;
   background-color: #1b166f;
 `;
 
